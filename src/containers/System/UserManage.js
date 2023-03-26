@@ -2,13 +2,15 @@ import React, { Component } from 'react';
 import { FormattedMessage } from 'react-intl';
 import { connect } from 'react-redux';
 import './UserManage.scss';
-import { getAllUsers } from '../../services/userService'
+import { getAllUsers } from '../../services/userService';
+import ModalUser from './ModalUser';
 class UserManage extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             arrUsers: [],
+            isOpenModalUser: false
         }
     }
 
@@ -21,6 +23,21 @@ class UserManage extends Component {
         }
 
     }
+    handleAddNewUser = () => {
+        this.setState({
+            isOpenModalUser: true
+        })
+    }
+
+    toggleModalUser = () => {
+        this.setState({
+            isOpenModalUser: !this.state.isOpenModalUser
+        })
+    }
+
+
+
+
     /*Run Component:
 * 1. Run construct -> init state và render lần 1
 * 2. Did Mount (set state)
@@ -33,8 +50,17 @@ class UserManage extends Component {
         let { arrUsers } = this.state;
         return (
             <div className='users-container'>
+                <ModalUser
+                    isOpen={this.state.isOpenModalUser}
+                    toggleFromParent={this.toggleModalUser}
+                />
                 <div className=" title text-center">
                     Manage users with Sherlock Nguyen
+                </div>
+                <div className='mx-1'>
+                    <button
+                        onClick={() => this.handleAddNewUser()}
+                        class='btn btn-primary px-3'><i class="fas fa-plus"></i> Add New User</button>
                 </div>
                 <div className='users-table mt-3 mx-1'>
                     <table id="customers">
