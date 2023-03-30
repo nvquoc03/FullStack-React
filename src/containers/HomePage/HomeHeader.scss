@@ -68,19 +68,34 @@
 
             .language-vi{
                 cursor: pointer;
+                opacity: 0.5;
 
                 &.active{
-                    color: red;
+                        opacity: 1;
+                        span{
+                            color: rgb(236, 59, 10);
+                        }
+                      
+                }
+                &:hover{
+                    opacity: 0.9;
                 }
             }
 
             .language-en{
                 margin: 0 10px;
                 cursor: pointer;
+                opacity: 0.5;
 
                 &.active{
-                    color: blue;
-                }
+                        opacity: 1;
+                        span{
+                            color: rgb(45, 125, 224);
+                        }
+                        }
+                &:hover{
+                         opacity: 0.9;
+                        }      
             }
 
         }
