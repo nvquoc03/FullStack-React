@@ -9,7 +9,7 @@ import Slider from 'react-slick';
 
 
 
-class Specialty extends Component {
+class HandBook extends Component {
 
 
     render() {
@@ -19,37 +19,37 @@ class Specialty extends Component {
 
 
         return (
-            <div className='section-share section-specialty'>
+            <div className='section-share section-handbook'>
                 <div className='section-container'>
                     <div className='section-header'>
-                        <span className='title-section'>Chuyên khoa phổ biến</span>
-                        <button className='btn-section'>Xem thêm</button>
+                        <span className='title-section'>Cẩm Nang</span>
+                        <button className='btn-section'>Tất cả bài viết</button>
                     </div>
                     <div className='section-body'>
                         <Slider {...this.props.settings}>
                             <div className='section-customize'>
-                                <div className='bg-image section-specialty' ></div>
-                                <div>Cơ xương khớp 1</div>
+                                <div className='bg-image section-handbook' ></div>
+                                <div>Gói chăm sóc sức khỏe tại nhà 1</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specialty' ></div>
-                                <div>Cơ xương khớp 2</div>
+                                <div className='bg-image section-handbook' ></div>
+                                <div>Gói chăm sóc sức khỏe tại nhà 2</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specialty' ></div>
-                                <div>Cơ xương khớp 3</div>
+                                <div className='bg-image section-handbook' ></div>
+                                <div>Gói chăm sóc sức khỏe tại nhà 3</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specialty' ></div>
-                                <div>Cơ xương khớp 4</div>
+                                <div className='bg-image section-handbook' ></div>
+                                <div>Gói chăm sóc sức khỏe tại nhà 4</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specialty' ></div>
-                                <div>Cơ xương khớp 5</div>
+                                <div className='bg-image section-handbook' ></div>
+                                <div>Gói chăm sóc sức khỏe tại nhà 5</div>
                             </div>
                             <div className='section-customize'>
-                                <div className='bg-image section-specialty' ></div>
-                                <div>Cơ xương khớp 6</div>
+                                <div className='bg-image section-handbook' ></div>
+                                <div>Gói chăm sóc sức khỏe tại nhà 6</div>
                             </div>
                         </Slider>
                     </div>
@@ -75,4 +75,4 @@ const mapDispatchToProps = dispatch => {
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Specialty);
+export default connect(mapStateToProps, mapDispatchToProps)(HandBook);
