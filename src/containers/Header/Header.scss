@@ -20,4 +20,35 @@
             font-size: $base-size + 1px;
         }
     }
+
+    .languages-logOut{
+        .language-en{
+            margin-right: 20px;
+            margin-left: 10px;
+            cursor: pointer;
+            opacity: 0.7;
+
+            &.active{
+                opacity: 1;
+                color: #ff00f3
+            }
+            &:hover{
+                opacity: 0.8;
+                color: #ff00f3;
+            }
+        }
+        .language-vi{
+            cursor: pointer;
+            opacity: 0.7;
+
+            &.active{
+                opacity: 1;
+                color: #ff6464;
+            }
+            &:hover{
+                opacity: 0.8;
+                color:  #ff6464
+            }
+        }
+    }
 }
