@@ -38,7 +38,7 @@
     },
     "manage-user": {
         "add": "Add a new user",
-        "email": "Emai",
+        "email": "Email",
         "password": "Password",
         "first-name": "First Name",
         "last-name": "Last Name",
