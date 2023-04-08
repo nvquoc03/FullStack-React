@@ -16,7 +16,7 @@
 
 .slick-prev:before, .slick-next:before{
     font-family: FontAweSome !important;
-    color: red !important;
+    color: rgb(152, 142, 142) !important;
 }
 
 .slick-next{
@@ -30,6 +30,10 @@
     &:hover{
         background: #e6e6e6 !important;
     }
+}
+
+.slick-disabled{
+    display: none !important;
 }
 
 

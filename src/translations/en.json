@@ -51,5 +51,9 @@
         "save": "Save User",
         "edit": "Edit User",
         "upload-file": "Upload file"
+    },
+    "home-page": {
+        "out-standing-doctor": "OutStanding Doctor",
+        "more-infor": "More Infor"
     }
 }
