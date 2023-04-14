@@ -16,7 +16,22 @@
         outline: none;
         border: none;
         padding: 5px;
-        background: rgb(231, 163, 36);
+        background: rgb(228, 70, 46);
+        color: white;
+        cursor: pointer;
+
+        &:hover{
+            opacity: 0.9;
+        }
+    }
+    .create-content-doctor{
+        margin: 20px 0;
+        border-radius: 3px;
+        outline: none;
+        border: none;
+        padding: 5px;
+        background: rgb(1, 75, 193);
+        color: white;
         cursor: pointer;
 
         &:hover{
