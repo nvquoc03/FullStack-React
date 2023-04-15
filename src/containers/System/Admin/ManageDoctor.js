@@ -104,8 +104,6 @@ class ManageDoctor extends Component {
                 hasOldData: false
             })
         }
-        console.log("check select doctor: ", res)
-
     };
 
     handleOnChangeDesc = (event) => {
