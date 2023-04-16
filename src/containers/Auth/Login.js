@@ -48,7 +48,6 @@ class Login extends Component {
                 })
             } if (data && data.errCode === 0) {
                 this.props.userLoginSuccess(data.user)
-                alert("Login succeeds")
             }
 
 
@@ -69,6 +68,11 @@ class Login extends Component {
         this.setState({
             isShowPassword: !this.state.isShowPassword
         })
+    }
+    handleKeyDown = (event) => {
+        if (event.key === 'Enter' || event.keyCode === 13) {
+            this.handleLogin()
+        }
     }
 
     render() {
@@ -92,7 +96,9 @@ class Login extends Component {
                                     className='form-control'
                                     placeholder='Enter your password'
                                     value={this.state.value}
-                                    onChange={(event) => { this.handleOnChangePassword(event) }} />
+                                    onChange={(event) => { this.handleOnChangePassword(event) }}
+                                    onKeyDown={(event) => this.handleKeyDown(event)}
+                                />
 
                                 <span onClick={() => { this.handleShowHidePassword() }}>
                                     <i className={this.state.isShowPassword ? "far fa-eye" : "fas fa-eye-slash"}></i></span>

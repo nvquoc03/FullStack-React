@@ -58,5 +58,11 @@
     "home-page": {
         "out-standing-doctor": "OutStanding Doctor",
         "more-infor": "More Infor"
+    },
+    "manage-schedule": {
+        "title": "Manage Doctor's Schedule",
+        "choose-doctor": "Choose Doctor",
+        "choose-date": "Choose Date",
+        "save": "Save Information"
     }
 }
