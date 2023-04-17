@@ -6,6 +6,7 @@
         font-weight: 600;
         font-size: 20px;
         text-align: center;
+        color:  #0071ba;
     }
 
     .pick-hour-container{
@@ -17,7 +18,13 @@
         
         .btn-schedule{
             padding: 5px 15px;
-            border: 1px solid rgb(245, 158, 37);
+            border: 1px solid grey;
+            color: black;
+
+            &.active{
+                background-color: orange;
+                color: white;
+            }
         }
     }
     .btn-save-schedule{
