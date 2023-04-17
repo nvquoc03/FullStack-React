@@ -9,7 +9,7 @@ import DatePicker from '../../../components/Input/DatePicker'
 import moment from 'moment';
 import { toast } from 'react-toastify';
 import _ from 'lodash';
-
+import { saveBulkScheduleDoctor } from '../../../services/userService'
 class ManageSchedule extends Component {
 
     constructor(props) {
@@ -101,9 +101,10 @@ class ManageSchedule extends Component {
         })
     }
 
-    hanldesSaveSchedule = () => {
+    hanldesSaveSchedule = async () => {
         let { rangeTime, selectedDoctor, currentDate } = this.state
-        let FormatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER);
+        // let FormatedDate = moment(currentDate).format(dateFormat.SEND_TO_SERVER); // Convert TimeStamp(00:00:00.000Z) to String
+        let FormatedDate = new Date(currentDate).getTime() //Convert TimeStamp(00:00:00.000Z) to TimeStamp (012345678)
         let result = [];
 
         if (selectedDoctor && _.isEmpty(selectedDoctor)) {
@@ -130,7 +131,14 @@ class ManageSchedule extends Component {
                 return;
             }
         }
-        console.log('check result from ManageSchedule: ', result)
+        let res = await saveBulkScheduleDoctor({
+            arrSchedule: result,
+            doctorId: selectedDoctor.value,
+            FormatedDate: FormatedDate
+        })
+        toast.success('Save info succeed!');
+
+
     }
 
     render() {
