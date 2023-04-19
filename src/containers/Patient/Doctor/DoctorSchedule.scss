@@ -1,7 +1,7 @@
 
 .doctor-schedule-container{
     height: 100%;
-    border-right: 1px solid black;
+    border-right: 1px solid #ddd;
     .all-schedule{
 
         select{
@@ -30,16 +30,17 @@
         }
 
         .time-content{
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
+           
+            .time-content-btns{
+                display: flex;
+                gap: 15px;
+                flex-wrap: wrap;
 
             button{
                 padding: 8px 10px;
                 border: none;
                 outline: none;
                 background-color: #fff04b;
-                min-width: 120px;
                 border-radius: 3px;
                 font-weight: 600;
                 color: #333;
@@ -49,6 +50,25 @@
                     background-color: #45C3D2;
                     color: rgb(254, 255, 255);
                 }
+            }
+
+            .btn-vi{
+                min-width: 125px;
+            }
+            .btn-en{
+                min-width: 170px;
+            }
+
+            .available-schedule{
+                font-size: 15x;
+                color: #333;
+                font-style: italic;
+                font-weight: 400;
+            }
+        }
+
+            .book-free{
+                margin-top: 10px;
             }
         }
     }
