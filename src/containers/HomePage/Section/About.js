@@ -17,7 +17,7 @@ class About extends Component {
                     </div>
                     <div className='content-right'>
                         <p>I'm VanQuoc with nickname is sherlockNguyenDev. My aim is become a web developer, i wan't to travel to foreign country,
-                            my parents will live a happy life than now, and many reason i can't explain to end, so Kepp Going. I Never Give Up
+                            my parents will live a happy life than now, and many reason i can't explain to end, so Keep Going. I Never Give Up
                         </p>
                     </div>
                 </div>

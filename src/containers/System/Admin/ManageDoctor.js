@@ -144,7 +144,7 @@ class ManageDoctor extends Component {
             contentHTML: this.state.contentHTML,
             contentMarkdown: this.state.contentMarkdown,
             description: this.state.description,
-            action: hasOldData = true ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
+            action: hasOldData === true ? CRUD_ACTIONS.EDIT : CRUD_ACTIONS.CREATE,
 
             selectedPrice: this.state.selectedPrice.value,
             selectedPayment: this.state.selectedPayment.value,
@@ -174,8 +174,8 @@ class ManageDoctor extends Component {
                 addressClinic = res.data.Doctor_Infor.addressClinic;
                 note = res.data.Doctor_Infor.note;
                 priceId = res.data.Doctor_Infor.priceId;
-                paymentId = res.data.Doctor_Infor.paymentId
-                provinceId = res.data.Doctor_Infor.provinceId
+                paymentId = res.data.Doctor_Infor.paymentId;
+                provinceId = res.data.Doctor_Infor.provinceId;
 
                 selectedPrice = listPrice.find(item => {
                     return item && item.value === priceId

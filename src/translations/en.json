@@ -71,6 +71,13 @@
             "available-schedule": "The doctor doesn't have an appointment during this time, please choose another time!",
             "choose": "Choose ",
             "book-free": " and book (free)"
+        },
+        "extra-infor-doctor": {
+            "text-address": "Address of examination",
+            "price": "Examination price",
+            "detail": "Show detail",
+            "payment": "Patients can pay by: ",
+            "hide-infor": "Hide detail"
         }
     },
     "admin": {
@@ -84,7 +91,7 @@
             "payment": "Payment",
             "province": "Province",
             "clinic-name": "Clinic's name",
-            "address-clinic": "Clinic's address",
+            "clinic-address": "Clinic's address",
             "note": "Note"
         }
     }
