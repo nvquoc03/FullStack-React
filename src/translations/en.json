@@ -78,6 +78,22 @@
             "detail": "Show detail",
             "payment": "Patients can pay by: ",
             "hide-infor": "Hide detail"
+        },
+        "booking-modal": {
+            "title": "Information to book a medical appointment",
+            "full-name": "Full Name",
+            "phone-number": "Phone Number",
+            "email": "Email",
+            "address": "Address",
+            "reason": "Reason for medical examination",
+            "birthday": "Date of birth",
+            "gender": "Genders",
+            "btn-confirm": "Confirm",
+            "btn-cancel": "Cancel"
+        },
+        "profile-doctor": {
+            "free-booking": "Free booking",
+            "price": "Price: "
         }
     },
     "admin": {
