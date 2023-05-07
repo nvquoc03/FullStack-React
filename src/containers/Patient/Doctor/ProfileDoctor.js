@@ -77,7 +77,7 @@ class ProfileDoctor extends Component {
 
     render() {
         let { dataProfile } = this.state;
-        let { language, dataTime, isShowDescription } = this.props;
+        let { language, dataTime, isShowDescriptionDoctor } = this.props;
 
         let nameVi, nameEn = ''
         if (dataProfile && dataProfile.positionData) {
@@ -98,11 +98,11 @@ class ProfileDoctor extends Component {
                             {language === LANGUAGES.VI ? nameVi : nameEn}
                         </div>
                         <div className='right-down'>
-                            {isShowDescription && isShowDescription === true ?
+                            {isShowDescriptionDoctor && isShowDescriptionDoctor === true ?
                                 <>
-                                    {dataProfile.Markdown && dataProfile.Markdown.Description &&
+                                    {dataProfile && dataProfile.Markdown && dataProfile.Markdown.description &&
                                         <span>
-                                            {dataProfile.Markdown.Description}
+                                            {dataProfile.Markdown.description}
                                         </span>
                                     }
                                 </>
