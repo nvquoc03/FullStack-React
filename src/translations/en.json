@@ -94,7 +94,8 @@
         },
         "profile-doctor": {
             "free-booking": "Free booking",
-            "price": "Price: "
+            "price": "Price: ",
+            "more": "See more"
         }
     },
     "admin": {

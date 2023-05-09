@@ -3,14 +3,30 @@
 
     .detail-specialty-body{
         
-        margin: 0 100px;
+        padding: 0 100px;
+        background-color: #eeeeee;
+        display: flex;
+        flex-direction: column;
 
         .description-specialty{
-            border: 1px solid red;
+            padding: 10px;
+            background-color: white !important;
+            margin: 14px 0;
+
         }
         .search-province-doctor{
-            
-        }
+            .choose-province{
+                border: none;
+                outline: none;
+                padding: 10px 0;
+                font-weight: 500;
+                font-size: 15px;
+                cursor: pointer;
+                border-radius: 3px;
+                text-align: center;
+                }
+            }
+           
     
         .each-doctor{
             display: flex;

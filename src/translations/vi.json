@@ -94,7 +94,8 @@
         },
         "profile-doctor": {
             "free-booking": "Miễn phí đặt lịch",
-            "price": "Giá khám: "
+            "price": "Giá khám: ",
+            "more": "Xem thêm"
         }
     },
     "admin": {
