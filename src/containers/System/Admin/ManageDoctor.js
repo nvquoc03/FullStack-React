@@ -103,6 +103,16 @@ class ManageDoctor extends Component {
                 })
             }
 
+            if (Type === "CLINIC") {
+                inputData.map((item, index) => {
+                    let object = {};
+                    object.label = item.name
+                    object.value = item.id;
+                    result.push(object)
+
+                })
+            }
+
         }
         return result;
     }
@@ -116,19 +126,22 @@ class ManageDoctor extends Component {
         }
 
         if (prevProps.allRequiredDoctorInfor !== this.props.allRequiredDoctorInfor) {
-            let { resPrice, resPayment, resProvince, resSpecialty } = this.props.allRequiredDoctorInfor;
+            let { resPrice, resPayment, resProvince, resSpecialty, resClinic } = this.props.allRequiredDoctorInfor;
 
             let dataSelectPrice = this.buildDataInputSelect(resPrice, "PRICE");
             let dataSelectPayment = this.buildDataInputSelect(resPayment, "PAYMENT");
             let dataSelectProvince = this.buildDataInputSelect(resProvince, "PROVINCE");
             let dataSelectSpecialty = this.buildDataInputSelect(resSpecialty, "SPECIALTY");
+            let dataSelectClinic = this.buildDataInputSelect(resClinic, "CLINIC");
+
 
 
             this.setState({
                 listPrice: dataSelectPrice,
                 listPayment: dataSelectPayment,
                 listProvince: dataSelectProvince,
-                listSpecialty: dataSelectSpecialty
+                listSpecialty: dataSelectSpecialty,
+                listClinic: dataSelectClinic
 
             })
         }
@@ -184,15 +197,15 @@ class ManageDoctor extends Component {
     handleChangeSelect = async (selectedOption) => {
         this.setState({ selectedOption })
         let res = await getDetailInforDoctor(selectedOption.value)
-        let { listPrice, listPayment, listProvince, listSpecialty } = this.state
+        let { listPrice, listPayment, listProvince, listSpecialty, listClinic } = this.state
 
         if (res && res.errCode === 0 && res.data && res.data.Markdown) {
             let markdown = res.data.Markdown;
 
             let nameClinic = '', addressClinic = '', note = '',
-                priceId = '', paymentId = '', provinceId = '', specialtyId,
+                priceId = '', paymentId = '', provinceId = '', specialtyId, clinicId = '',
                 selectedPrice = '', selectedPayment = '', selectedProvince = '',
-                selectedSpecialty = ''
+                selectedSpecialty = '', selectedClinic = ''
 
 
             if (res.data.Doctor_Infor) {
@@ -203,6 +216,7 @@ class ManageDoctor extends Component {
                 paymentId = res.data.Doctor_Infor.paymentId;
                 provinceId = res.data.Doctor_Infor.provinceId;
                 specialtyId = res.data.Doctor_Infor.specialtyId;
+                clinicId = res.data.Doctor_Infor.clinicId
 
                 selectedPrice = listPrice.find(item => {
                     return item && item.value === priceId
@@ -215,6 +229,9 @@ class ManageDoctor extends Component {
                 })
                 selectedSpecialty = listSpecialty.find(item => {
                     return item && item.value === specialtyId
+                })
+                selectedClinic = listClinic.find(item => {
+                    return item && item.value === clinicId
                 })
 
 
@@ -230,7 +247,8 @@ class ManageDoctor extends Component {
                 selectedPrice: selectedPrice,
                 selectedPayment: selectedPayment,
                 selectedProvince: selectedProvince,
-                selectedSpecialty: selectedSpecialty
+                selectedSpecialty: selectedSpecialty,
+                selectedClinic: selectedClinic
             })
         } else {
             this.setState({
@@ -244,7 +262,8 @@ class ManageDoctor extends Component {
                 selectedPrice: '',
                 selectedPayment: '',
                 selectedProvince: '',
-                selectedSpecialty: ''
+                selectedSpecialty: '',
+                selectedClinic: ''
             })
         }
     };
