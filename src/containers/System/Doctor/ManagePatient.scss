@@ -1,3 +1,12 @@
+
+div._loading_overlay_wrapper {
+    position: unset;
+    
+    ._loading_overlay_overlay{
+        z-index: 10000;
+    }
+}
+
 .manage-patient-container{
     .m-p-title{
         margin-top: 15px;
@@ -32,16 +41,10 @@
                 border-radius: 3px;
                 background-color: green;
                 color: white;
-                margin-right: 10px;
+                margin-left: 5px;
 
             }
-            .mp-btn-send-remedy{
-                height: 30px;
-                border-radius: 3px;
-                background-color: orange;
-                color: white;
-
-            }
+           
      }
     }
 }
